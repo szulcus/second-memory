@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://jakub104.github.io/second-memory",
   "devDependencies": {
-    "gh-pages": "2.1.0",
+    "gh-pages": "2.0.1",
     "react-scripts": "3.0.1"
   },
   "dependencies": {
@@ -19,12 +19,12 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
