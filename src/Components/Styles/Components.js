@@ -13,12 +13,13 @@ const Wrapper = styled.main`
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	${props =>
 		props.app &&
 		css`
 			align-items: center;
 			flex-direction: column;
+			-webkit-tap-highlight-color: transparent;
 			:hover {
 				cursor: pointer;
 			}

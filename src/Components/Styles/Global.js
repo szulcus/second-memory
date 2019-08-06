@@ -8,9 +8,9 @@ const Global = createGlobalStyle`
 	}
 	
 	* {
-		--color-primary: gray;
-		--color-highlighted: lightgray;
-		--color-decorative: green;
+		--color-primary: lightgray;
+		--color-secondary: gray;
+		--color-decorative: pink;
 		--color-background: #202020;
 		--color-light: #ffffff;
 		--color-dark: #000000;

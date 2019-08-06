@@ -4,14 +4,26 @@ import styled, { css } from 'styled-components'
 // STYLES
 import Global from '../Styles/Global'
 import { Wrapper } from '../Styles/Components'
-
+// FILES
+import leaf from '../images/leaf.svg'
 
 const Counter = styled.div`
-	color: var(--color-highlighted);
-	font-size: 30vmin;
+	font-size: 50px;
 	font-weight: bold;
+`
+
+const ClickIcon = styled.img`
+	width: 50vmin;
+	transition: all 0.1s ease;
 	::selection {
 		background-color: transparent;
+	}
+	:active {
+		opacity: 0.5;
+		transform: scale(0.9) rotate(3deg);
+	}
+	@media (min-width: 720px) {
+		width: 30vmin;
 	}
 `
 
@@ -25,14 +37,40 @@ const Add = styled.div`
 	::selection {
 		background-color: transparent;
 	}
-	
 	${props =>
 		props.preview &&
 		css`
 			display: block;
-			animation: up 0.7s both;
+			animation: mobileUp 0.7s both;
+			@media (min-width: 720px) {
+				animation: up 0.7s both;
+			}
 		`
 	};
+`
+
+const Input = styled.input`
+	width: 90vw;
+	max-width: 300px;
+	background-color: transparent;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	border: none;
+	border-bottom: 1px solid var(--color-decorative);
+	outline: none;
+	color: var(--color-primary);
+	::placeholder {
+		transition: all 0.2s ease-in-out;
+		color: var(--color-decorative);
+		opacity: 0.3;
+	}
+
+	:focus::placeholder {
+		opacity: 0;
+		transform: scale(0);
+	}
 `
 
 class App extends Component {
@@ -47,7 +85,7 @@ class App extends Component {
 	}
 
 	handleClick = () => {
-		this.setState({counter: this.state.counter + 10})
+		this.setState({counter: this.state.counter + this.state.add})
 		if (this.state.previewAdd1 === false) {
 			this.setState({previewAdd1: true})
 			setTimeout(() => {
@@ -80,17 +118,41 @@ class App extends Component {
 		}
 	}
 
+	handleKeyPress = (e) => {
+		
+		if (e.key === 'Enter') {
+			// e.preventDefault();
+			// this.setState({add: e.target.value});
+			const value = e.target.value
+			this.setState(
+				() => {
+					return {
+						add: Number(value)
+					};
+				},
+				
+				() => {
+					this.handleClick();
+				}
+			);
+		}
+	}
+
 	render() {
+		// window.addEventListener("keypress", this.handleClick)
 		return (
 			<>
 				<Global />
-				<Wrapper app onClick={this.handleClick}>
+				<Wrapper app>
 					<Add preview={this.state.previewAdd1}>+{this.state.add}</Add>
 					<Add preview={this.state.previewAdd2}>+{this.state.add}</Add>
 					<Add preview={this.state.previewAdd3}>+{this.state.add}</Add>
 					<Add preview={this.state.previewAdd4}>+{this.state.add}</Add>
 					<Add preview={this.state.previewAdd5}>+{this.state.add}</Add>
 					<Counter>{this.state.counter}</Counter>
+					<ClickIcon src={leaf} alt="" onClick={this.handleClick}/>
+					<Input type="number" placeholder="Zmień ilość" onKeyPress={this.handleKeyPress} />
+					{/* <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */}
 				</Wrapper>
 			</>
 		);
