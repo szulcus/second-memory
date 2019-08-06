@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1845d6178ee976084a00f1bf5567ab42",
+    "revision": "3583bfaafbd1acd9076d2b3bb2a8ffa5",
     "url": "/second-memory/index.html"
   },
   {
-    "revision": "4d1389e7b11907b27d7e",
+    "revision": "31c042b58fc19958ac0c",
     "url": "/second-memory/static/css/main.786d3052.chunk.css"
   },
   {
-    "revision": "e417d85fc44da1a00ddf",
-    "url": "/second-memory/static/js/2.834b42b7.chunk.js"
+    "revision": "75a94290fae0f73ef5b9",
+    "url": "/second-memory/static/js/2.57aa813a.chunk.js"
   },
   {
-    "revision": "4d1389e7b11907b27d7e",
-    "url": "/second-memory/static/js/main.0dc4dbe2.chunk.js"
+    "revision": "31c042b58fc19958ac0c",
+    "url": "/second-memory/static/js/main.a839ed07.chunk.js"
   },
   {
     "revision": "1010653d8d14ec515e35",
