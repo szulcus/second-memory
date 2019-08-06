@@ -1,11 +1,17 @@
 // BASIC
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
+import { library } from '@fortawesome/fontawesome-svg-core'
 // STYLES
 import Global from '../Styles/Global'
-import { Wrapper } from '../Styles/Components'
+import { Wrapper, Icon } from '../Styles/Components'
 // FILES
 import leaf from '../images/leaf.svg'
+// ICONS
+import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faUserTie, faReply, faCog } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFacebookF, faGithub, faLinkedinIn, faUserTie, faReply, faCog);
 
 const Counter = styled.div`
 	font-size: 50px;
@@ -130,7 +136,6 @@ class App extends Component {
 						add: Number(value)
 					};
 				},
-				
 				() => {
 					this.handleClick();
 				}
