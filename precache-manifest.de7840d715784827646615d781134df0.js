@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0963ec84760a0da3e440f655835368e3",
+    "revision": "1845d6178ee976084a00f1bf5567ab42",
     "url": "/second-memory/index.html"
   },
   {
-    "revision": "f7d7b4ad88fa453192cd",
-    "url": "/second-memory/static/css/main.1c50128a.chunk.css"
+    "revision": "4d1389e7b11907b27d7e",
+    "url": "/second-memory/static/css/main.786d3052.chunk.css"
   },
   {
-    "revision": "cfa8747c965ea3388fd6",
-    "url": "/second-memory/static/js/2.c61ec8cf.chunk.js"
+    "revision": "e417d85fc44da1a00ddf",
+    "url": "/second-memory/static/js/2.834b42b7.chunk.js"
   },
   {
-    "revision": "f7d7b4ad88fa453192cd",
-    "url": "/second-memory/static/js/main.368895c5.chunk.js"
+    "revision": "4d1389e7b11907b27d7e",
+    "url": "/second-memory/static/js/main.0dc4dbe2.chunk.js"
   },
   {
     "revision": "1010653d8d14ec515e35",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c5e01a9e81fb6a1bd6ce32e435bd1db8",
     "url": "/second-memory/static/media/instagram-icon.c5e01a9e.png"
+  },
+  {
+    "revision": "c12bfecc22ca80e4eaf7e5fd7ccf2ac8",
+    "url": "/second-memory/static/media/leaf.c12bfecc.svg"
   },
   {
     "revision": "8a2fabccfad38d9158808e24891ddf2a",
